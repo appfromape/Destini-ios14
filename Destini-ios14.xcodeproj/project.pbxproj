@@ -11,10 +11,12 @@
 		A017863F25E6889500E0FF94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017863E25E6889500E0FF94 /* SceneDelegate.swift */; };
 		A017864125E6889500E0FF94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017864025E6889500E0FF94 /* ViewController.swift */; };
 		A017864425E6889500E0FF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A017864225E6889500E0FF94 /* Main.storyboard */; };
-		A017864625E6889600E0FF94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A017864525E6889600E0FF94 /* Assets.xcassets */; };
 		A017864925E6889600E0FF94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A017864725E6889600E0FF94 /* LaunchScreen.storyboard */; };
 		A017865425E6889600E0FF94 /* Destini_ios14Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017865325E6889600E0FF94 /* Destini_ios14Tests.swift */; };
 		A017865F25E6889600E0FF94 /* Destini_ios14UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017865E25E6889600E0FF94 /* Destini_ios14UITests.swift */; };
+		A017867825E6895800E0FF94 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017867725E6895800E0FF94 /* Story.swift */; };
+		A017867D25E6897A00E0FF94 /* StoryBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017867C25E6897A00E0FF94 /* StoryBrain.swift */; };
+		A017868725E68DD500E0FF94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A017868625E68DD500E0FF94 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +42,6 @@
 		A017863E25E6889500E0FF94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A017864025E6889500E0FF94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A017864325E6889500E0FF94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A017864525E6889600E0FF94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A017864825E6889600E0FF94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A017864A25E6889600E0FF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A017864F25E6889600E0FF94 /* Destini-ios14Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Destini-ios14Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +50,9 @@
 		A017865A25E6889600E0FF94 /* Destini-ios14UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Destini-ios14UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A017865E25E6889600E0FF94 /* Destini_ios14UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destini_ios14UITests.swift; sourceTree = "<group>"; };
 		A017866025E6889600E0FF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A017867725E6895800E0FF94 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		A017867C25E6897A00E0FF94 /* StoryBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBrain.swift; sourceTree = "<group>"; };
+		A017868625E68DD500E0FF94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../Destini-iOS13/Destini-iOS13/Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +105,10 @@
 			children = (
 				A017863C25E6889500E0FF94 /* AppDelegate.swift */,
 				A017863E25E6889500E0FF94 /* SceneDelegate.swift */,
-				A017864025E6889500E0FF94 /* ViewController.swift */,
-				A017864225E6889500E0FF94 /* Main.storyboard */,
-				A017864525E6889600E0FF94 /* Assets.xcassets */,
+				A017867225E688DD00E0FF94 /* Controller */,
+				A017867625E6893000E0FF94 /* Model */,
+				A017868125E6898900E0FF94 /* View */,
+				A017868625E68DD500E0FF94 /* Assets.xcassets */,
 				A017864725E6889600E0FF94 /* LaunchScreen.storyboard */,
 				A017864A25E6889600E0FF94 /* Info.plist */,
 			);
@@ -126,6 +131,31 @@
 				A017866025E6889600E0FF94 /* Info.plist */,
 			);
 			path = "Destini-ios14UITests";
+			sourceTree = "<group>";
+		};
+		A017867225E688DD00E0FF94 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A017864025E6889500E0FF94 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A017867625E6893000E0FF94 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A017867725E6895800E0FF94 /* Story.swift */,
+				A017867C25E6897A00E0FF94 /* StoryBrain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A017868125E6898900E0FF94 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A017864225E6889500E0FF94 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A017864925E6889600E0FF94 /* LaunchScreen.storyboard in Resources */,
-				A017864625E6889600E0FF94 /* Assets.xcassets in Resources */,
+				A017868725E68DD500E0FF94 /* Assets.xcassets in Resources */,
 				A017864425E6889500E0FF94 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A017867D25E6897A00E0FF94 /* StoryBrain.swift in Sources */,
 				A017864125E6889500E0FF94 /* ViewController.swift in Sources */,
 				A017863D25E6889500E0FF94 /* AppDelegate.swift in Sources */,
 				A017863F25E6889500E0FF94 /* SceneDelegate.swift in Sources */,
+				A017867825E6895800E0FF94 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +475,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.appfromape.Destini-ios14.Destini-ios14";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appfromape.Destini-ios14";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -462,7 +494,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.appfromape.Destini-ios14.Destini-ios14";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appfromape.Destini-ios14";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
